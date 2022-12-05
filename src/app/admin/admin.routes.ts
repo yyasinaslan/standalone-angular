@@ -8,6 +8,7 @@ export const adminRoutes: Routes = [
     path: '', component: AdminLayoutComponent, children: [
       {path: '', pathMatch: 'full', component: DashboardComponent},
       {path: 'users', component: UsersComponent},
+      {path: 'products', loadComponent: () => import('./pages/products/products.component')},
     ]
   }
 
